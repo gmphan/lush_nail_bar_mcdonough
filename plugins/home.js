@@ -3,8 +3,8 @@
 const log = require('../lib/logger')
 
 async function handleHomePage(req, reply){
-    
-    reply.send('home page')
+    reply.view('/views/home/index', {text:'text'})
+    // reply.send('home page')
 }
 
 
