@@ -1,5 +1,6 @@
 <lasso-page package-path="./browser.json"/>
-
+import nav from "../nav/index.marko"
+import footer from "../footer/index.marko"
 
 <!doctype html>
 <html>
@@ -11,9 +12,9 @@
         <lasso-head/>
     </head>
     <body>  
-        
-       <${input.content}/>   
-        
+        <${nav} ...data></>
+        <${input.content}/>   
+        <${footer} ...data></>
         <lasso-body/>
         <browser-refresh enabled="true"/> <!--need npm install browser-refresh-taglib --save --->
     </body>
