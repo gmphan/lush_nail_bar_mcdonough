@@ -20,85 +20,85 @@ hr {
     border-color: #ffffff00;
   }
   
-  hr.light {
-    border-color: #fff;
-  }
-  
-  a {
-    color:#F05F40; 
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
-  }
-  
-  a:hover {
-    color: #f05f40;
-  }
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-  }
+hr.light {
+  border-color: #fff;
+}
 
-  .bg-primary {
-    background-color: #333333 !important;
-  }
-  
-  .bg-dark {
-    background-color: #212529 !important;
-  }
-  
-  .text-faded {
-    color: rgba(255, 255, 255, 0.7);
-  }
-  
-  ::-moz-selection {
-    color: #fff;
-    background: #212529;
-    text-shadow: none;
-  }
-  
-  ::selection {
-    color: #fff;
-    background: #212529;
-    text-shadow: none;
-  }
-  
-  img::-moz-selection {
-    color: #fff;
-    background: transparent;
-  }
-  
-  img::selection {
-    color: #fff;
-    background: transparent;
-  }
-  
-  img::-moz-selection {
-    color: #fff;
-    background: transparent;
-  }
+a {
+  color:#F05F40; 
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+a:hover {
+  color: #f05f40;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.bg-primary {
+  background-color: #333333 !important;
+}
+
+.bg-dark {
+  background-color: #212529 !important;
+}
+
+.text-faded {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+::-moz-selection {
+  color: #fff;
+  background: #212529;
+  text-shadow: none;
+}
+
+::selection {
+  color: #fff;
+  background: #212529;
+  text-shadow: none;
+}
+
+img::-moz-selection {
+  color: #fff;
+  background: transparent;
+}
+
+img::selection {
+  color: #fff;
+  background: transparent;
+}
+
+img::-moz-selection {
+  color: #fff;
+  background: transparent;
+}
 
 
 .btn-xl {
-    padding: 1rem 2rem;
+  padding: 1rem 2rem;
 }
 
 .btn-primary {
-    background-color: #ffffff00; 
-    border-color: #F05F40;
+  background-color: #ffffff00; 
+  border-color: #F05F40;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-    color: #fff;
-    background-color: #333333 !important;
+  color: #fff;
+  background-color: #333333 !important;
 }
 
 .btn-primary:active, .btn-primary:focus {
-    -webkit-box-shadow: 0 0 0 0.2rem rgba(66, 64, 64, 0.5) !important;
-    box-shadow: 0 0 0 0.2rem rgba(66, 64, 64, 0.5) !important;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(66, 64, 64, 0.5) !important;
+  box-shadow: 0 0 0 0.2rem rgba(66, 64, 64, 0.5) !important;
 }
   
