@@ -102,4 +102,12 @@ img::-moz-selection {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(66, 64, 64, 0.5) !important;
   box-shadow: 0 0 0 0.2rem rgba(66, 64, 64, 0.5) !important;
 }
-  
+
+/* expand-header create by gphan
+  Help with showing up the clear nav
+  and padding down the content
+*/
+.new-page-header {
+  background-color: #212529;
+  padding-top: 50px
+}
