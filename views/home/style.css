@@ -137,6 +137,7 @@ section {
   #contact a:hover {
     color: white;
   }
+  
   #message-btn a:link,
   #message-btn a:visited,
   #message-btn a:hover {
@@ -148,7 +149,8 @@ section {
   position: relative;
   margin-bottom: 0;
   padding-bottom: 0.5em;
-  border: 1px solid #bab8b6;
+  border-bottom: 2px solid #bab8b6;
+
 }
 .floating-label-form-group input,
 .floating-label-form-group textarea {

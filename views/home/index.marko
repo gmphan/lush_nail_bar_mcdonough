@@ -77,14 +77,14 @@ import layout from "../layout/template/index.marko"
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
             <h2 class="section-heading text-white">Come to Us...</h2>
-            <hr class="light my-4">
+            <hr class="light my-5">
             <p class="text-faded mb-4">Located conveniently in Mc Donough, Georgia 30253- Lush Nail Bar is the ideal destination for you to immerse yourself in luxury environment. 
               Come to us, customers can believe in diversified services provided along with the best qualified products by professional and talented technicians. Your beauty will be 
               rejuvenated thanks for nails with simple floral but beautiful and charming patterns. Your hands and feet are also taken care of by suitable therapy method at competitive prices.<br/>
               Especially, understanding that customers always appreciate the cleanliness and safety when coming a nail salon, we ensure beautiful and healthy nails for each client. 
               The instrument after using is sanitized carefully and wrapped tightly to protect it from infection.            
             </p>
-            <hr class="light my-4">
+            <hr class="light my-5">
             <a class="btn btn-light btn-xl js-scroll-trigger" href="#photo">Photos</a>
           </div>
         </div>
@@ -195,39 +195,40 @@ import layout from "../layout/template/index.marko"
     <section class="bg-primary" id="contact">      
       <div class="container text-white">
         <div class="col-lg-8 mx-auto text-center">
-          <h2 class="section-heading">Contact Us!</h2>
+          <h2 class="section-heading">Contact Us</h2>
           <hr class="light my-4">
           <p class="mb-5"></p>
         </div>
         <div class="row">          
           <!-- <div class="col-md-4"> -->
-          <div class="col-lg-4 ml-auto text-center">
-              <i class="fas fa-address-card fa-3x mb-3"></i>
-              <!-- <i class="far fa-address-card fa-3x mb-3"></i> -->
-              <!-- <h4><strong>Lush Nail Bar</strong></h4> -->
-              <a class="js-scroll-trigger" href="#map">
+          <div class="col-lg-4 ml-auto text-center"> 
+            <a class="js-scroll-trigger" href="#map">
+              <i class="fas fa-map-marker-alt fa-3x mb-3"></i>
               <p><font size="4">128 S Point Blvd
-              <br>McDonough, GA 30253</font></p></a>             
-          </div>                
-          <div class="col-lg-4 ml-auto text-center">
-            <i class="fas fa-phone fa-3x mb-3 sr-contact-1"></i>            
-            <p><font size="4"><a>678-782-3028</a></font></p>
+              <br>McDonough, GA 30253</font></p>
+            </a>             
           </div>
+          <div class="col-lg-4 mr-auto text-center"> 
+            <i class="fas fa-phone fa-3x mb-3"></i>
+            <p>
+            <font size="4"><a>(678) 782-3028</a></font>
+            </p>             
+          </div>                 
           <div class="col-lg-4 mr-auto text-center">
-            <i class="fas fa-envelope fa-3x mb-3 sr-contact-2"></i>
-            <p><font size="4">
               <!-- <a href="mailto:Quanhi123456@yahoo.com">Email</a> -->
-              <a class="js-scroll-trigger" href="#message">Email</a>
-            </font></p>
+              <a class="js-scroll-trigger" href="#message">              
+                <i class="fas fa-envelope fa-3x mb-3 sr-contact-2"></i>
+                <p><font size="4">Email</font></p>              
+              </a>            
           </div>
         </div>
 
         <div class="col-lg-8 mx-auto text-center">
-          <hr class="light my-4">
+          <!-- <hr class="light my-4"> -->
           <!-- <p class="mb-5"></p> -->
-          <h2 class="section-heading">Store Hours:</h2>
-          <hr class="light my-4">
-          <p class="mb-5"></p>
+          <h2 class="section-heading">Service Hours</h2>
+          <!-- <hr class="light my-4"> -->
+          <!-- <p class="mb-4"></p> -->
         </div>
         <div class="row">
           <div class="col-md-6 ml-auto text-center">
@@ -258,29 +259,42 @@ import layout from "../layout/template/index.marko"
         <p class="mb-5"></p>
               
       </div>  
-      <div id="message-btn" class="col-lg-8 mx-auto text-center">
-            <!-- <p class="text-faded mb-5">Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p> -->
-            
+      <div id="message-btn" class="col-lg-8 mx-auto text-center">          
             <a class="btn btn-light btn-xl js-scroll-trigger" href="#message">Message Us!</a>            
       </div>           
     </section>
     <section id="message">
       <div class="container">
         <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading">Leave Us A Message!</h2>
+            <h2 class="section-heading">Leave Us A Message</h2>
             <hr class="my-4">          
         </div>
         <div class="row">
           <div class="col-lg-8 mx-auto col-lg-offset-2">
             <form name="sentMessage" id="contactForm">
               <div class="form-group floating-label-form-group">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                <label for="name">Name:</label>
+                <input type="name" class="form-control" id="name" placeholder="Name" name="name">
               </div>
+              <div class="form-group floating-label-form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+              </div>
+              <div class="form-group floating-label-form-group">
+                <label for="phone">Phone:</label>
+                <input type="phone" class="form-control" id="phone" placeholder="Phone" name="phone">
+              </div>
+              <div class="form-group floating-label-form-group">
+                <label for="textbox">Message:</label>
+                <textarea rows="3" type="textbox" class="form-control" id="textbox" placeholder="Message" name="textbox"></textarea>
+              </div>              
+              <div class="col-lg-12 text-center">                    
+                <br/>
+                <button type="submit" class="btn btn-dark btn-xl">Submit</button>                
+              </div>                  
             </form>
           </div>
-        </div>
-        
+        </div>        
       </div>
     </section>
     <div class="google-map" id="map" style="width:100%; height:auto;">
