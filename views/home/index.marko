@@ -16,29 +16,11 @@ import layout from "../layout/template/index.marko"
           <div class="col-lg-8 mx-auto">
             <!-- <p class="text-faded mb-5">Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p> -->
             <!-- <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">More about us</a> -->
-            <a class="btn btn-light btn-xl js-scroll-trigger" href="#about">More about us</a>
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Our Services</a>
           </div>
         </div>
       </div>
     </header>
-    <section class="bg-primary" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">Come to Us...</h2>
-            <hr class="light my-4">
-            <p class="text-faded mb-4">Located conveniently in Mc Donough, Georgia 30253- Lush Nail Bar is the ideal destination for you to immerse yourself in luxury environment. 
-              Come to us, customers can believe in diversified services provided along with the best qualified products by professional and talented technicians. Your beauty will be 
-              rejuvenated thanks for nails with simple floral but beautiful and charming patterns. Your hands and feet are also taken care of by suitable therapy method at competitive prices.<br/>
-              Especially, understanding that customers always appreciate the cleanliness and safety when coming a nail salon, we ensure beautiful and healthy nails for each client. 
-              The instrument after using is sanitized carefully and wrapped tightly to protect it from infection.            
-            </p>
-            <hr class="light my-4">
-            <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Services</a>
-          </div>
-        </div>
-      </div>
-    </section>
     <section id="services">
       <div class="container">
         <div class="row">
@@ -87,7 +69,25 @@ import layout from "../layout/template/index.marko"
       <div class="col-lg-12 text-center">
             <!-- <p class="text-faded mb-5">Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p> -->
             <br/><hr><br/>
-            <a class="btn btn-dark btn-xl js-scroll-trigger" href="#contact">Call us</a>
+            <a class="btn btn-dark btn-xl js-scroll-trigger" href="#about">More About Us</a>
+      </div>
+    </section>
+    <section class="bg-primary" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-white">Come to Us...</h2>
+            <hr class="light my-4">
+            <p class="text-faded mb-4">Located conveniently in Mc Donough, Georgia 30253- Lush Nail Bar is the ideal destination for you to immerse yourself in luxury environment. 
+              Come to us, customers can believe in diversified services provided along with the best qualified products by professional and talented technicians. Your beauty will be 
+              rejuvenated thanks for nails with simple floral but beautiful and charming patterns. Your hands and feet are also taken care of by suitable therapy method at competitive prices.<br/>
+              Especially, understanding that customers always appreciate the cleanliness and safety when coming a nail salon, we ensure beautiful and healthy nails for each client. 
+              The instrument after using is sanitized carefully and wrapped tightly to protect it from infection.            
+            </p>
+            <hr class="light my-4">
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="#photo">Photos</a>
+          </div>
+        </div>
       </div>
     </section>
     <section class="p-0" id="photo">
@@ -186,63 +186,89 @@ import layout from "../layout/template/index.marko"
         </div>
       </div>
     </section> 
-
-    <section class="bg-dark text-white"> 
+    <!-- <section class="bg-dark text-white"> 
       <div class="container text-center">
         <h2 class="mb-4">Gallery!</h2>
         <a class="btn btn-light btn-xl sr-button" href="#">Photos</a>
       </div>
-    </section>
-
-    <section id="contact">
-      
-      <div class="container">
+    </section> -->
+    <section class="bg-primary" id="contact">      
+      <div class="container text-white">
         <div class="col-lg-8 mx-auto text-center">
-          <h2 class="section-heading">Come To Us!</h2>
-          <hr class="my-4">
+          <h2 class="section-heading">Contact Us!</h2>
+          <hr class="light my-4">
           <p class="mb-5"></p>
         </div>
         <div class="row">          
           <!-- <div class="col-md-4"> -->
           <div class="col-lg-4 ml-auto text-center">
               <i class="fas fa-address-card fa-3x mb-3"></i>
+              <!-- <i class="far fa-address-card fa-3x mb-3"></i> -->
               <!-- <h4><strong>Lush Nail Bar</strong></h4> -->
-              <a href="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13319.703964920307!2d-84.1894976!3d33.4251738!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3db22615134730bf!2sLush+Nail+Bar!5e0!3m2!1sen!2s!4v1503924762019">
-              <p>128 S Point Blvd
-              <br>McDonough, GA 30253</p></a>
-             
-          </div>        
-        
+              <a href="#map">
+              <p><font size="4">128 S Point Blvd
+              <br>McDonough, GA 30253</font></p></a>             
+          </div>                
           <div class="col-lg-4 ml-auto text-center">
             <i class="fas fa-phone fa-3x mb-3 sr-contact-1"></i>            
-            <p><a>678-782-3028</a></p>
+            <p><font size="4"><a>678-782-3028</a></font></p>
           </div>
           <div class="col-lg-4 mr-auto text-center">
             <i class="fas fa-envelope fa-3x mb-3 sr-contact-2"></i>
-            <p>
+            <p><font size="4">
               <!-- <a href="mailto:Quanhi123456@yahoo.com">Email</a> -->
               <a href="#message">Email</a>
-            </p>
+            </font></p>
           </div>
         </div>
-      </div>      
-      <div class="google-map" id="map" style="width:100%; height:auto;">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13319.703964920307!2d-84.1894976!3d33.4251738!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3db22615134730bf!2sLush+Nail+Bar!5e0!3m2!1sen!2s!4v1503924762019" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen>
-        </iframe>
-      </div>
-      <div class="container">
-        <div class="col-lg-12 text-center">
-            <!-- <p class="text-faded mb-5">Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p> -->
-            <br/><hr><br/>
-            <a class="btn btn-dark btn-xl js-scroll-trigger" href="#message">Message Us!</a>
+
+        <div class="col-lg-8 mx-auto text-center">
+          <hr class="light my-4">
+          <!-- <p class="mb-5"></p> -->
+          <h2 class="section-heading">Store Hours:</h2>
+          <hr class="light my-4">
+          <p class="mb-5"></p>
         </div>
-      </div>
+        <div class="row">
+          <div class="col-md-6 ml-auto text-center">
+            <!-- <i class="fas fa-phone fa-3x mb-3 sr-contact-1"></i>  -->
+            <p><font size="5">Mon - Thu:</font></p>            
+          </div>
+          <div class="col-md-6 mr-auto text-center">
+            <!-- <i class="fas fa-phone fa-3x mb-3 sr-contact-1"></i>             -->
+            <p><font size="5">10:00 am - 7:30 pm</font></p>
+          </div>
+          <div class="col-md-6 ml-auto text-center">
+            <!-- <i class="fas fa-phone fa-3x mb-3 sr-contact-1"></i>  -->
+            <p><font size="5">Fri - Sat:</font></p>            
+          </div>
+          <div class="col-md-6 mr-auto text-center">
+            <!-- <i class="fas fa-phone fa-3x mb-3 sr-contact-1"></i>             -->
+            <p><font size="5">9:30 am - 7:30 pm</font></p>
+          </div>
+          <div class="col-md-6 ml-auto text-center">
+            <!-- <i class="fas fa-phone fa-3x mb-3 sr-contact-1"></i>  -->
+            <p><font size="5">Sun:</font></p>            
+          </div>
+          <div class="col-md-6 mr-auto text-center">
+            <!-- <i class="fas fa-phone fa-3x mb-3 sr-contact-1"></i>             -->
+            <p><font size="5">12:00 pm - 6:00 pm</font></p>
+          </div>
+        </div>
+        <p class="mb-5"></p>
+              
+      </div>  
+      <div id="message-btn" class="col-lg-8 mx-auto text-center">
+            <!-- <p class="text-faded mb-5">Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p> -->
+            
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="#message">Message Us!</a>            
+      </div>           
     </section>
-    <section class="bg-primary" id="message">
+    <section id="message">
       <div class="container">
         <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">Leave Us A Message!</h2>
-            <hr class="light my-4">          
+            <h2 class="section-heading">Leave Us A Message!</h2>
+            <hr class="my-4">          
         </div>
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
@@ -260,6 +286,10 @@ import layout from "../layout/template/index.marko"
         
       </div>
     </section>
+    <div class="google-map" id="map" style="width:100%; height:auto;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13319.703964920307!2d-84.1894976!3d33.4251738!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3db22615134730bf!2sLush+Nail+Bar!5e0!3m2!1sen!2s!4v1503924762019" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen>
+        </iframe>
+      </div>
     </@content>
     <!-- <@testing>testing </@testing> -->     
 </>
