@@ -11,7 +11,7 @@ $('#email-form').submit(async function(e){
     
     let ajaxRes = await ajaxFunc('POST', '/mailer', data)
     console.log(ajaxRes)
-    if(ajaxRes.res === 1){
+    if(ajaxRes === 1){
         alert('We have recieved your message. Thank you '+data.name+'!')
         document.getElementById('email-form').reset();
     }

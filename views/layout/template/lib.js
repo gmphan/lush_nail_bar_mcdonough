@@ -1,5 +1,5 @@
 
-$(document).ready(function(){});
+$(document).ready(function(){'use strict';});
 
 
 async function ajaxFunc(typeP, urlP, dataP){
