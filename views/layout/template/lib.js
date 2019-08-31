@@ -1,6 +1,9 @@
+
 $(document).ready(function(){});
 
+
 async function ajaxFunc(typeP, urlP, dataP){
+    console.log(typeP, urlP, dataP)
     return $.ajax({
         type:typeP,
         url:urlP,
@@ -10,7 +13,7 @@ async function ajaxFunc(typeP, urlP, dataP){
             // test:'testing'
         }),
         // dataType:'json', //tells jQuery that you want it to parse the returned JSON
-        success: function(dataR){
+        success: function(dataR){        
             return dataR
         },
         error: function(){

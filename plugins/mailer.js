@@ -2,30 +2,23 @@
 
 const logger = require('../lib/logger')
 const nodemailer = require('nodemailer')
+const config = require('../config')
 
 async function mailHandler(req, reply){
-    // Generate test SMTP service account from ethereal.email
-    // Only needed if you don't have a real mail account for testing
-    let testAccount = await nodemailer.createTestAccount()
+    console.log(req.body.dataK)
+    let reqData = req.body.dataK
+
 
     // create reusable transporter object using the default SMTP transport
-    let transporter = nodemailer.createTransport({
-        host: 'smtp.ethereal.email',
-        port: 587,
-        secure: false, // true for 465, false for other ports
-        auth: {
-            user: testAccount.user, // generated ethereal user
-            pass: testAccount.pass // generated ethereal password
-        }
-    })
+    let transporter = nodemailer.createTransport(config.gmail)
 
     // send mail with defined transport object
     let info = await transporter.sendMail({
-        from: '"Fred Foo 👻" <test@email.com>', // sender address
-        to: 'oc_buu@hotmail.com',//, baz@example.com', // list of receivers
-        subject: 'Hello ✔', // Subject line
-        text: 'Hello world?', // plain text body
-        html: '<b>Hello world?</b>' // html body
+        // from: reqData.email,
+        to: 'lushnailbarmcdonoughga@gmail.com',//, baz@example.com', // list of receivers
+        subject: 'message from ' + reqData.email, // Subject line
+        // text: reqData.message // plain text body
+        html: `<b>'Customer name: '`+reqData.name+`</b><br/><p>`+reqData.message+`</p>` // html body
     });
 
     console.log('Message sent: %s', info.messageId);
@@ -35,7 +28,7 @@ async function mailHandler(req, reply){
     console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
     // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
 
-    return{res:'mailer'}
+    return{res:1}
 }
 
 module.exports = async(fastify, opts, next)=>{
