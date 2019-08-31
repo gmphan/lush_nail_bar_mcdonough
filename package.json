@@ -29,6 +29,7 @@
     "lasso-marko": "^2.4.7",
     "marko": "^4.17.5",
     "node-dir": "^0.1.17",
+    "nodemailer": "^6.3.0",
     "path": "^0.12.7",
     "pino-pretty": "^3.1.0",
     "point-of-view": "^3.5.0"
