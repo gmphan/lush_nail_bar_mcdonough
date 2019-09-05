@@ -14,6 +14,11 @@ body {
   font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
 }
 
+.bodi-content {
+  min-height: calc(100vh - 100px);
+}
+
+
 /* every other pages are sections beside the homepage */
 section {
   padding: 8rem 0;
@@ -137,4 +142,10 @@ img::-moz-selection {
 .new-page-header {
   background-color: #212529;
   padding-top: 50px
+}
+
+.border-test{
+  border:1px solid red;
+  height: 100px;
+  
 }
