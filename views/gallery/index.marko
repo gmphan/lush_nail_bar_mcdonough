@@ -3,53 +3,19 @@ import layout from "../layout/template/index.marko"
 <${layout} ...data>
 <@title>Gallery</@title>
 <@content>
-    <section class="bg-primary bodi-content" id="gallery">  
+    <section class="bg-primary bodi-content" id="gallery"> 
+    <!-- ${data.photoNam}  -->
         <div class="container-fluid p-0 text-center">
             <h2 class="section-heading text-white">Enjoy Our Art !</h2>
              <hr class="light my-5">
             <div class="row no-gutters popup-gallery">
-                
-                <div class="col-sm-6 col-md-3 border-test">
-                    <!-- <div class="photo-frame"> -->
-                        <a class="portfolio-box" href="/public/assets/img/gallery/1555622226_1513609596_4(18-12).png">                            
-                            <img src="/public/assets/img/portfolio/thumbnails/1555622226_1513609596_4(18-12).png" alt="">                            
-                        </a>
-                    <!-- </div> -->
-                </div>
-                <div class="col-sm-6 col-md-3 border-test">
-                    <a class="portfolio-box" href="/public/assets/img/gallery/1555622372_1.jpg">                            
-                        <img src="/public/assets/img/portfolio/thumbnails/1555622372_1.jpg" alt="">                            
-                    </a>
-                </div>
-                <div class="col-sm-6 col-md-3 border-test">
-                    <a class="portfolio-box" href="/public/assets/img/gallery/1555622372_2.jpg">                            
-                        <img src="/public/assets/img/portfolio/thumbnails/1555622372_2.jpg" alt="">                            
-                    </a>
-                </div>
-                <div class="col-sm-6 col-md-3 border-test">
-                    <a class="portfolio-box" href="/public/assets/img/gallery/1555622372_3.jpg">                            
-                        <img src="/public/assets/img/portfolio/thumbnails/1555622372_3.jpg" alt="">                            
-                    </a>
-                </div>
-                <div class="col-sm-6 col-md-3 border-test">
-
-                </div>
-                <div class="col-sm-6 col-md-3 border-test">
-
-                </div>
-                <div class="col-sm-6 col-md-3 border-test">
-
-                </div>
-                <div class="col-sm-6 col-md-3 border-test">
-
-                </div>
-                <div class="col-sm-6 col-md-3 border-test">
-
-                </div>
-                <div class="col-sm-6 col-md-3 border-test">
-
-                </div>
-
+                <for|name, index| of=data.photoNam>
+                    <div class="col">                        
+                        <a class="" href="/public/assets/img/gallery/${name}">                                                      
+                            <img class="img-size" src="/public/assets/img/portfolio/thumbnails/${name}" alt=""> 
+                        </a>                        
+                    </div>
+                </for>
             </div>
         </div>
     </section>

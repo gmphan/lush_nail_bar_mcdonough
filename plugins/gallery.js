@@ -4,31 +4,42 @@ const fs    = require('fs')
 const log = require('../lib/logger')
 const thumb = require('node-thumbnail').thumb
 
-async function handleHomePage(req, reply){
-
-    const galleryPath = path.join(__dirname, '../public/assets/img', 'gallery')
-    const gallery = fs.readdirSync(galleryPath)  
-    // console.log(photos)
-    for(let photo of gallery){
-        const photoPath = path.join(__dirname, '../public/assets/img', 'gallery', photo) 
-        const photoName = path.parse(photoPath).name 
-        // await thumb({
-        //     suffix: '',
-        //     width: '100',
-        //     source: photoPath,
-        //     destination:path.join(__dirname, '../public/assets/img/portfolio', 'thumbnails')
-        // }).then(async function(){
-        //     await cpToGllry(photo)
-        //     await rmPhoto(photo)
-        // })
-        
-        
-        console.log(photoName)
+async function handleHomePage(req, reply){    
+    const uPath = path.join(__dirname, '../public/assets/img', 'upload')
+    const uPhotos = fs.readdirSync(uPath)  
+    
+    if(uPhotos.length){        
+        for(let photo of uPhotos){
+            // console.log(photo)
+            let photoPath = path.join(__dirname, '../public/assets/img', 'upload', photo) 
+            const gPath = path.join(__dirname, '../public/assets/img', 'gallery', photo) 
+            let photoName = path.parse(photoPath).name             
+            await thumb({
+                suffix: '',
+                width: '200',
+                overwrite: true,
+                source: photoPath,
+                destination: path.join(__dirname, '../public/assets/img/portfolio', 'thumbnails')
+            })
+            .then(async function(){
+                await mvPhotos(photoPath, gPath)
+            })            
+        }
     }
+    const galleryPath = path.join(__dirname, '../public/assets/img/', 'gallery')
+    const photoNames = fs.readdirSync(galleryPath) 
+    // console.log('photo Name:', photoNames)
+    reply.view('/views/gallery/index', {photoNam:photoNames})
+}
 
 
-    reply.view('/views/gallery/index', {text:'text'})
-    // reply.send('home page')
+async function mvPhotos(oldPath, newPath){
+    console.log(newPath)
+    fs.rename(oldPath, newPath, (err) => {
+        if (err) throw err;
+        console.log('Rename complete!');
+      });   
+    return 1
 }
 
 

@@ -5,16 +5,19 @@
 }
 /* .img-size{
     
-    height: 100%; 
-    object-fit: contain;
-}
+    height: 300px; 
+    object-fit: contain; 
+} */
 img {
     border: 1px solid #ddd;
     border-radius: 4px;
-    padding: 5px;
-    width: 100px;
+    /* padding: 5px; */
+    width: 200px;
+    height: 200px;
+    margin-bottom:5px 
+    
 }
 
 img:hover {
     box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-} */
+} 
