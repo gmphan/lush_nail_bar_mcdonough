@@ -19,6 +19,14 @@
         "type":"css",
         "url":"//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     },
+    {
+        "type":"css",
+        "url":"//use.fontawesome.com/releases/v5.0.13/js/solid.js"
+    },
+    {
+        "type":"css",
+        "url":"//use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+    },
     "style.css",
     {
         "type":"js",

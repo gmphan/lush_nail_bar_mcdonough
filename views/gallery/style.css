@@ -1,13 +1,4 @@
-.photo-frame{
-    /* position: relative; */
-    height: 50px;
-    width: 50px;
-}
-/* .img-size{
-    
-    height: 300px; 
-    object-fit: contain; 
-} */
+
 img {
     border: 1px solid #ddd;
     border-radius: 4px;

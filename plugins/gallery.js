@@ -8,6 +8,12 @@ async function handleHomePage(req, reply){
     const uPath = path.join(__dirname, '../public/assets/img', 'upload')
     const uPhotos = fs.readdirSync(uPath)  
     
+    /**
+     * if there are photos in upload folder then
+     * go through and covert each photo into a thumbnail
+     * . The thumnails are moved to thumnails folder, and 
+     * the original photo are moved to thumbnail gallery folder
+     */
     if(uPhotos.length){        
         for(let photo of uPhotos){
             // console.log(photo)
@@ -28,7 +34,7 @@ async function handleHomePage(req, reply){
     }
     const galleryPath = path.join(__dirname, '../public/assets/img/', 'gallery')
     const photoNames = fs.readdirSync(galleryPath) 
-    // console.log('photo Name:', photoNames)
+    // render gallery page and send all photo names from gallery to it
     reply.view('/views/gallery/index', {photoNam:photoNames})
 }
 
