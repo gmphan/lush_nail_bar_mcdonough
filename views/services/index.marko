@@ -4,41 +4,80 @@ import layout from "../layout/template/index.marko"
     <@title>Acrylic Nail</@title>
     <@content>
         <section class="bg-primary bodi-content" id="services"> 
-            <div class="container-fluid p-0 text-center text-white">
+            <div class="container p-0 text-center text-white">
                 <h2 class="section-heading text-white">Services</h2>
-                <hr class="light my-5">
-                <div class="wrapper border-test">
+                        <hr class="light my-5">
+                <div class="row">
+                    <div class="col">              
 
-                    <!-- Sidebar -->
-                    <nav id="sidebar">
-                        <div class="sidebar-header">
-                            <h3>Bootstrap Sidebar</h3>
-                        </div>
-                        <ul class="list-unstyled components">
-                            <p>Dummy Heading</p>
-                            <li class="active">
-                                <a href="#acrylic">Acrylic</a>
-                            </li>
-                            <li>
-                                <a href="#pedicure">Pedicure</a>
-                            </li>
-                        </ul>
-                    </nav>
+                        <!-- the sidebar start from here -->
+                        <div class="wrapper border-test">
 
-                    <!-- Page Content -->
-                    <div id="content">
-                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                            <div class="container-fluid">
-
-                                <button type="button" id="sidebarCollapse" class="btn btn-info">
-                                    <i class="fa fa-align-left"></i>
-                                    <span>Toggle Sidebar</span>
-                                </button>
-
-                            </div>
-                        </nav>
+                            <!-- Sidebar -->
+                            <nav id="sidebar">
+                                <div class="sidebar-header">
+                                    <h4>Bootstrap Sidebar</h4>
+                                </div>
+                                <ul class="list-unstyled components">
+                                    <!-- <p>Dummy Heading</p> -->
+                                    <li class="active">
+                                        <a href="#acrylic">ACRYLIC</a>
+                                    </li>
+                                    <li>
+                                        <a href="#sns">SNS</a>
+                                    </li>
+                                    <li>
+                                        <a href="#gel-polish">GEL POLISH</a>
+                                    </li>
+                                    <li>
+                                        <a href="#mani-pedi">MANI - PEDI</a>
+                                    </li>
+                                    <li>
+                                        <a href="#additional">ADDITIONAL</a>
+                                    </li>
+                                    <li>
+                                        <a href="#spa-pedi">SPA PEDICURE</a>
+                                    </li>
+                                    <li>
+                                        <a href="#children">CHILDREN</a>
+                                    </li>
+                                    <li>
+                                        <a href="#waxing">WAXING</a>
+                                    </li>
+                                    <li>
+                                        <a href="#eyelash">EYELASH</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>                        
                     </div>
-
+                    <!-- I will need to position them on top of each other
+                    and then use .hide .show function to show when click
+                    https://mdbootstrap.com/docs/jquery/navigation/sidenav/
+                     -->
+                    <div class="col-6 border-test">
+                        <div id="acrylic">
+                            <h4>Acrylic</h4>
+                        </div>
+                        <div id="sns">
+                            <h4>SNS</h4>
+                        </div>
+                        <div id="">
+                            <h4></h4>
+                        </div>
+                        <div id="">
+                            <h4></h4>
+                        </div>
+                        <div id="">
+                            <h4></h4>
+                        </div>
+                        <div id="">
+                            <h4></h4>
+                        </div>
+                    </div>
+                    <div id="" class="col border-test">
+                            <p>picture </p>
+                    </div>
                 </div>
             </div>
         </section>
