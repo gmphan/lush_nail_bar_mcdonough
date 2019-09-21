@@ -1,0 +1,116 @@
+<section class="bg-primary bodi-content" id="services"> 
+            <div class="container p-0 text-center text-white">
+                <h2 class="section-heading text-white">Services</h2>
+                        <hr class="light my-5">
+                <div class="row">
+                    <div class="col">              
+
+                        <!-- the sidebar start from here -->
+                        <div class="wrapper border-test">
+
+                            <!-- Sidebar -->
+                            <nav id="sidebar">
+                                <div class="sidebar-header">
+                                    <h4>Bootstrap Sidebar</h4>
+                                </div>
+                                <ul class="list-unstyled components">
+                                    <!-- <p>Dummy Heading</p> -->
+                                    <li class="active">
+                                        <a href="#acrylic">ACRYLIC</a>
+                                    </li>
+                                    <li>
+                                        <a href="#sns">SNS</a>
+                                    </li>
+                                    <li>
+                                        <a href="#gel-polish">GEL POLISH</a>
+                                    </li>
+                                    <li>
+                                        <a href="#mani-pedi">MANI - PEDI</a>
+                                    </li>
+                                    <li>
+                                        <a href="#additional">ADDITIONAL</a>
+                                    </li>
+                                    <li>
+                                        <a href="#spa-pedi">SPA PEDICURE</a>
+                                    </li>
+                                    <li>
+                                        <a href="#children">CHILDREN</a>
+                                    </li>
+                                    <li>
+                                        <a href="#waxing">WAXING</a>
+                                    </li>
+                                    <li>
+                                        <a href="#eyelash">EYELASH</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>                        
+                    </div>
+                    <!-- I will need to position them on top of each other
+                    and then use .hide .show function to show when click
+                    https://mdbootstrap.com/docs/jquery/navigation/sidenav/
+                     -->
+                    <div class="col-6 border-test">
+                        <div id="acrylic">
+                            <h4>Acrylic</h4>
+                        </div>
+                        <div id="sns">
+                            <h4>SNS</h4>
+                        </div>
+                        <div id="">
+                            <h4></h4>
+                        </div>
+                        <div id="">
+                            <h4></h4>
+                        </div>
+                        <div id="">
+                            <h4></h4>
+                        </div>
+                        <div id="">
+                            <h4></h4>
+                        </div>
+                    </div>
+                    <div id="" class="col border-test">
+                            <p>picture </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+ul{
+    padding-top: 10px;
+}
+li{
+    padding-top:10px;
+
+}
+#sidebar ul li a:link{
+    border-bottom: 1px solid
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    /* min-height: 100vh; */
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+@media (max-width: 770px) {
+    /* #sidebar {
+        margin-left: -250px;
+    } */
+    #sidebar.active {
+        margin-left: 0;
+    }
+}
