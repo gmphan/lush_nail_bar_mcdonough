@@ -71,6 +71,7 @@ font-weight: 300;
 /* every other pages are sections beside the homepage */
 section {
   padding: 8rem 0;
+  height:100vh
 }
 
 .section-heading {
