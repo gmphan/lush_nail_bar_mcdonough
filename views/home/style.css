@@ -132,6 +132,11 @@ form .row:first-child .floating-label-form-group {
   border-top: 1px solid #bab8b6;//#eeeeee;
 }
 /**--- end Contact me -------------**/
+
+.border-white{
+  border:1px solid white;
+}
+
 .border-test{
   border: 1px solid red;
 }
