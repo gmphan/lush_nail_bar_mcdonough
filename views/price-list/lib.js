@@ -1,35 +1,50 @@
 
-// $('.text_container').addClass("hidden");
-// $('.text_container').click(function() {
-//     var $this = $(this);
 
-//     if ($this.hasClass("hidden")) {
-//         $(this).removeClass("hidden").addClass("visible");
+let crrtActiveLiElement = document.getElementById('ul-priceList').childNodes[0]
+let crrtShowIdElement = document.getElementById('acrylic')
 
-//     } else {
-//         $(this).removeClass("visible").addClass("hidden");
-//     }
-// });
-
-var crntActiveId = getCurrtPriceList()
 $('.price-link').on("click", function(){
+    //remove active from current active li
+    crrtActiveLiElement.classList.remove('active')
+    //get href query string
+    const $thisHref = $(this).attr("href")
+    var numberSymbolPosition = $thisHref.search('#')
+    const qryString = $thisHref.substring(numberSymbolPosition+1, numberSymbolPosition.length)
+    //add active to new current active li
+
+    var index = getChildNodeIndex('ul-priceList', $thisHref)
+
+    crrtActiveLiElement = document.getElementById('ul-priceList').childNodes[index]
+    console.log(crrtActiveLiElement)
+    crrtActiveLiElement.classList.add('active')
+
+    //add hidden class to current Id s    
+    crrtShowIdElement.classList.add('hidden')
+    //remove hidden from new current ID
+    crrtShowIdElement = document.getElementById(qryString)
+    crrtShowIdElement.classList.remove('hidden')
     
-    //get current active class
-    //get value which related to id content
 })
 
-
-
-function getCurrtPriceList(){
-    var pricelistElement = document.getElementById('price-list')
-    var pricelistList = pricelistElement.childNodes[1].getElementsByClassName('components')
-    var pricelistActive = pricelistList[0].getElementsByClassName('active')
-    var currentActHref = pricelistActive[0].childNodes[0].href
-    var numSymbolPos = currentActHref.search('#')
-    var crntActId = currentActHref.substring(numSymbolPos+1, currentActHref.length)
-    return crntActId
-    // console.log(crntActId)
-}
-function getDisplayClass(id){
+function getChildNodeIndex(parentId, href){
+     
+    var parentElementChildNodes = document.getElementById(parentId).childNodes
     
+
+    for(let i=0; i<parentElementChildNodes.length; i++){
+        var aTag = parentElementChildNodes[i].childNodes[0]
+        var fullHref = aTag.href 
+        var numSymbolPos = fullHref.search("#")
+        var queryString = fullHref.substring(numSymbolPos, fullHref.length)
+        if(queryString === href){
+            console.log(href)
+            return i
+        }
+    }
+
 }
+
+
+
+
+
