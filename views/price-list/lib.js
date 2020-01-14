@@ -1,3 +1,4 @@
+'use strict'
 
 
 let crrtActiveLiElement = document.getElementById('ul-priceList').childNodes[0]
@@ -43,6 +44,8 @@ function getChildNodeIndex(parentId, href){
     }
 
 }
+
+
 
 
 

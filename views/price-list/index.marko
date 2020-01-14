@@ -8,7 +8,8 @@
                 </div>
             </div>
             <div id="pl-body" class="row">
-                <div class="col-lg-4 text-center border-test">
+                
+                <div class="col-lg-4">
                     <ul id="ul-priceList" class="list-unstyled components">
                         <li class="active">
                             <a href="#acrylic" class="price-link">ACRYLIC</a>
@@ -39,40 +40,22 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-8 mx-auto text-center border-test">
-                    
-                    <!-- <div class="text_container">
-                        <h4><a>Acrylic</a></h4>
-                        <div>
-                            <p>test</p>
-                        </div>
-                    </div> -->
-                    <!-- <div class="text_container">
-                        <h4>SNS</h4>
-                        <div>
-                            <p>sns</p>
-                        </div>
-                    </div>                     -->
-                    <div id="acrylic">
-                        <h4>Acrylic</h4>
-                        <p>
-                        Atrium is a revolutionary campus card management solution for institutions of any size. It provides 
-                        the functionality of traditional systems … re-imagined for the future. Easy and powerful for administrators 
-                        to use, Atrium is backed by personalized support and a 100% availability guarantee from a trusted name in 
-                        the industry. Atrium provides a superior user experience for today’s iGeneration students through effortless 
-                        access to services on and off campus through their mobile devices. And, as a secure, hosted cloud system, 
-                        Atrium lowers the cost of ownership making it the ideal campus management solution.
-                        </p>
-                    </div>
-                    <div id="sns" class="hidden border-test">
-                        <h4>SNS</h4>
-                        <p>
-                        There are many transportation options between Atlanta's Hartsfield-Jackson International Airport and Athens. 
-                        Groome Transportation offers a regular shuttle service to and from the UGA Georgia Center as well as to and 
-                        from many other locations throughout Athens with a reservation, including Graduate Athens. Click here for a 
-                        full list of Groome Transportation Athens locations and its shuttle schedule. 
-                        </p>
-                    </div>
+                <div class="col-lg-8 mx-auto">  
+                    <for|secondObj, idxOfFirstObj| of=Object.keys(data)>    
+                        ${secondObj}                         
+                        <div class="row">
+                            <div class="col-lg-2"></div>
+                            <div class="col-lg-6 text_container">
+                                <!-- ${data.acrylic['Acrylic Full Set']} -->
+                                <!-- ${Object.keys(data.acrylic).length} -->                                
+                                <ul class="list-unstyled opening-hours">
+                                <for|name, index| of=Object.keys(data[secondObj])>                                           
+                                    <li style="margin:2em 0">${name} <span class="pull-right">${data[secondObj][name]}</span></li>                                    
+                                </for> 
+                                </ul>                   
+                            </div>
+                        </div> 
+                    </for>                
                 </div>                            
             </div>     
             <div class="row">
