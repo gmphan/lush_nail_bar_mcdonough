@@ -10,33 +10,33 @@
             </div>
             <div id="pl-body" class="row">
                 
-                <div class="col-lg-4">
+                <div class="col-lg-4 text-center">
                     <ul id="ul-priceList" class="list-unstyled components">
-                        <li class='active'>
+                        <li class='active' style="margin:0 0 2em 0">
                             <a href="#acrylic" class="price-link">ACRYLIC</a>
                         </li>
-                        <li>
+                        <li style="margin:0 0 2em 0">
                             <a href="#sns" class="price-link">SNS</a>
                         </li>
-                        <li>
+                        <li style="margin:0 0 2em 0">
                             <a href="#gel_polish" class="price-link">GEL POLISH</a>
                         </li>
-                        <li>
+                        <li style="margin:0 0 2em 0">
                             <a href="#mani_pedi" class="price-link">MANI - PEDI</a>
                         </li>
-                        <li>
+                        <li style="margin:0 0 2em 0">
                             <a href="#additional" class="price-link">ADDITIONAL</a>
                         </li>
-                        <li>
+                        <li style="margin:0 0 2em 0">
                             <a href="#spa_pedi" class="price-link">SPA PEDICURE</a>
                         </li>
-                        <li>
+                        <li style="margin:0 0 2em 0">
                             <a href="#children" class="price-link">CHILDREN</a>
                         </li>
-                        <li>
+                        <li style="margin:0 0 2em 0">
                             <a href="#waxing" class="price-link">WAXING</a>
                         </li>
-                        <li>
+                        <li style="margin:0 0 2em 0">
                             <a href="#eyelash" class="price-link">EYELASH</a>
                         </li>
                     </ul>
@@ -48,30 +48,26 @@
                         $ const id = '#'+item
                         <if(index === 0)>                                                          
                             <div class="row" id=id>                                
-                                <!-- <div class="col-lg-2">${item}</div> -->
-                                <!-- <div class="col-lg-6 text_container"> -->
-                                    $ const sndObj = data[item]
-                                    $ const sndLvlPriceObjArr = Object.keys(sndObj)
-                                    <ul class="list-unstyled opening-hours">
-                                        <for|item2, index2, array2| of=sndLvlPriceObjArr>
-                                            <li style="margin:0 0 2em 0">${item2} <span class="pull-right">${sndObj[item2]}</span></li>
-                                        </for> 
-                                    </ul>                                   
-                                <!-- </div> -->
+                                $ const sndObj = data[item]
+                                $ const sndLvlPriceObjArr = Object.keys(sndObj)
+                                <ul class="list-unstyled opening-hours">
+                                    <for|item2, index2, array2| of=sndLvlPriceObjArr>
+                                        <li style="margin:0 0 2em 0">${item2} <span class="pull-right">${sndObj[item2]}</span></li>
+                                        
+                                    </for> 
+                                </ul>                                   
                             </div>
                         </if>
                         <if(index !== 0)>                                                                                  
-                            <div class="row hidden" id=id>                                
-                                <!-- <div class="col-lg-2">${item}</div> -->
-                                <!-- <div class="col-lg-6 text_container"> -->
-                                    $ const sndObj = data[item]
-                                    $ const sndLvlPriceObjArr = Object.keys(sndObj)
-                                    <ul class="list-unstyled opening-hours">
-                                        <for|item2, index2, array2| of=sndLvlPriceObjArr>
-                                            <li style="margin:0 0 2em 0">${item2} <span class="pull-right">${sndObj[item2]}</span></li>
-                                        </for> 
-                                    </ul>                                   
-                                <!-- </div> -->
+                            <div class="row hidden" id=id>     
+                                $ const sndObj = data[item]
+                                $ const sndLvlPriceObjArr = Object.keys(sndObj)
+                                <ul class="list-unstyled opening-hours">
+                                    <for|item2, index2, array2| of=sndLvlPriceObjArr>
+                                        <li style="margin:0 0 2em 0">${item2} <span class="pull-right">${sndObj[item2]}</span></li>
+                                        
+                                    </for> 
+                                </ul>                                   
                             </div>
                         </if>
                         
