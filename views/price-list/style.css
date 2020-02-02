@@ -5,6 +5,27 @@
 .visible>div {
 	display:block;
 } */
+
 .hidden{
 	display: none;
 }
+#ul-priceList li{
+	border-bottom: 1px solid #ddd !important;
+	
+	padding: 1em 0 1em 0;
+}
+#ul-priceList .active{
+	background-color: gray;
+}
+#first-ul li{
+	border-bottom: 1px solid #ddd !important;
+	/* padding: 1em 0 1em 0; */
+}
+
+/* #ul-priceList li a:hover{
+	background-color: gray;
+} */
+/* style="margin:0 0 2em 0" 
+class="pull-right"
+mx-auto
+*/

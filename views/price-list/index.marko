@@ -5,43 +5,44 @@
             <div id="pl-header" class="row">
                 <div class="col-lg-8 mx-auto text-center">
                     <h2 class="section-heading text-white">Price List</h2>
-                    <hr class="light my-5">
+                    <br/><hr>
+                    <hr class="light my-3">                    
                 </div>
             </div>
             <div id="pl-body" class="row">
                 
-                <div class="col-lg-4 text-center">
+                <div class="col-lg-4 text-center" style="padding:0em 0 0em 0">
                     <ul id="ul-priceList" class="list-unstyled components">
-                        <li class='active' style="margin:0 0 2em 0">
+                        <li class='active'>
                             <a href="#acrylic" class="price-link">ACRYLIC</a>
                         </li>
-                        <li style="margin:0 0 2em 0">
+                        <li>
                             <a href="#sns" class="price-link">SNS</a>
                         </li>
-                        <li style="margin:0 0 2em 0">
+                        <li>
                             <a href="#gel_polish" class="price-link">GEL POLISH</a>
                         </li>
-                        <li style="margin:0 0 2em 0">
+                        <li>
                             <a href="#mani_pedi" class="price-link">MANI - PEDI</a>
                         </li>
-                        <li style="margin:0 0 2em 0">
+                        <li>
                             <a href="#additional" class="price-link">ADDITIONAL</a>
                         </li>
-                        <li style="margin:0 0 2em 0">
+                        <li>
                             <a href="#spa_pedi" class="price-link">SPA PEDICURE</a>
                         </li>
-                        <li style="margin:0 0 2em 0">
+                        <li>
                             <a href="#children" class="price-link">CHILDREN</a>
                         </li>
-                        <li style="margin:0 0 2em 0">
+                        <li>
                             <a href="#waxing" class="price-link">WAXING</a>
                         </li>
-                        <li style="margin:0 0 2em 0">
+                        <li>
                             <a href="#eyelash" class="price-link">EYELASH</a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-8 mx-auto text-center">  
+                <div id="price-detail" class="col-lg-8 mx-auto border-test" style="background-color:gray; padding:1em 0 1em 5em">  
                     $ const fstLvlPriceObjArr = Object.keys(data)
                     <!-- ${fstLvlPriceObjArr} -->
                     <for|item, index, array| of=fstLvlPriceObjArr>
@@ -50,10 +51,10 @@
                             <div class="row" id=id>                                
                                 $ const sndObj = data[item]
                                 $ const sndLvlPriceObjArr = Object.keys(sndObj)
-                                <ul class="list-unstyled opening-hours">
+                                <ul class="list-unstyled border-line" id="first-ul">
                                     <for|item2, index2, array2| of=sndLvlPriceObjArr>
-                                        <li style="margin:0 0 2em 0">${item2} <span class="pull-right">${sndObj[item2]}</span></li>
-                                        
+                                        <!-- <li style="margin:0 0 2em 0">${item2} <span class="pull-right">${sndObj[item2]}</span></li> -->
+                                        <li>${item2} <span>${sndObj[item2]}</span></li>
                                     </for> 
                                 </ul>                                   
                             </div>
@@ -82,6 +83,7 @@
             </div>     
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
+                    <br/><hr>
                     <hr class="light my-5">
                     <a class="btn btn-light btn-xl js-scroll-trigger" href="#photo">Photos</a>
                 </div>    
