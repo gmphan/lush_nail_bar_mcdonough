@@ -9,6 +9,7 @@
 .hidden{
 	display: none;
 }
+
 #ul-priceList li{
 	border-bottom: 1px solid #ddd !important;
 	
@@ -29,3 +30,4 @@
 class="pull-right"
 mx-auto
 */
+
