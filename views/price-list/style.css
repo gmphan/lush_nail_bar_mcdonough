@@ -11,23 +11,31 @@
 }
 
 #ul-priceList li{
-	border-bottom: 1px solid #ddd !important;
-	
+	border-bottom: 1px solid gray !important;	
 	padding: 1em 0 1em 0;
 }
-#ul-priceList .active{
-	background-color: gray;
+#ul-priceList li a:hover{
+	color: red;
 }
-#first-ul li{
-	border-bottom: 1px solid #ddd !important;
-	/* padding: 1em 0 1em 0; */
+#ul-priceList .active{
+	background-color: #212529;
 }
 
-/* #ul-priceList li a:hover{
-	background-color: gray;
-} */
-/* style="margin:0 0 2em 0" 
-class="pull-right"
-mx-auto
-*/
+#ul-priceList a{
+	color:white
+}
+td{
+	text-align: left;
+}
+table, td {
+	border: 1px solid clear;
+	border-bottom: 1px solid gray !important;
+	padding: 15px 0 15px 0;
+	
+  }
+table{
+	width:100%;
+}
+
+
 
