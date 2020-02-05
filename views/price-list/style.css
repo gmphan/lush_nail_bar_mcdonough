@@ -18,7 +18,10 @@
 	color: red;
 }
 #ul-priceList .active{
-	background-color: #212529;
+	background-color:white;/*#212529;*/
+}
+#ul-priceList .active a{
+	color:red;
 }
 
 #ul-priceList a{
