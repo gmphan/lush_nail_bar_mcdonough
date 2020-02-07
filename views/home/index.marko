@@ -1,6 +1,8 @@
 <lasso-page package-path="./browser.json"/>
 import layout from "../layout/template/index.marko"
 import pricelist from "../price-list/index.marko"
+import photo from "../photo/index.marko"
+import message from "../message/index.marko"
 <${layout} ...data>
     <@title>Lush-Nail-Bar - McDonough</@title>
     <@content>
@@ -94,108 +96,8 @@ import pricelist from "../price-list/index.marko"
       </div>
     </section>
     <${pricelist} ...data></>
+    <${photo} ...data></>
     
-    <section class="p-0" id="photo">
-      <div class="container-fluid p-0 text-center">
-        <div class="row no-gutters popup-gallery">
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="/public/assets/img/portfolio/fullsize/1.jpg">
-              <img class="img-fluid" src="/public/assets/img/portfolio/thumbnails/1.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <!-- <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div> -->
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="/public/assets/img/portfolio/fullsize/2.jpg">
-              <img class="img-fluid" src="/public/assets/img/portfolio/thumbnails/2.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <!-- <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div> -->
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="/public/assets/img/portfolio/fullsize/3.jpg">
-              <img class="img-fluid" src="/public/assets/img/portfolio/thumbnails/3.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <!-- <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div> -->
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="/public/assets/img/portfolio/fullsize/4.jpg">
-              <img class="img-fluid" src="/public/assets/img/portfolio/thumbnails/4.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <!-- <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div> -->
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="/public/assets/img/portfolio/fullsize/5.jpg">
-              <img class="img-fluid" src="/public/assets/img/portfolio/thumbnails/5.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <!-- <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div> -->
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="/public/assets/img/portfolio/fullsize/6.jpg">
-              <img class="img-fluid" src="/public/assets/img/portfolio/thumbnails/6.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <!-- <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div> -->
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <hr class="light my-1">
-        <a href="/gallery"><p class="text-muted mb-0">More photos ...</p></a>
-        <hr class="light my-4">
-            <a class="btn btn-dark btn-xl js-scroll-trigger" href="#contact">Contact Us</a>
-        <hr class="light my-5">
-      </div>
-    </section> 
     <!-- <section class="bg-dark text-white"> 
       <div class="container text-center">
         <h2 class="mb-4">Gallery!</h2>
@@ -268,40 +170,8 @@ import pricelist from "../price-list/index.marko"
             <a class="btn btn-light btn-xl js-scroll-trigger" href="#message">Message Us!</a>            
       </div>           
     </section>
-    <section id="message">
-      <div class="container">
-        <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading">Leave Us A Message</h2>
-            <hr class="my-4">          
-        </div>
-        <div class="row">
-          <div class="col-lg-8 mx-auto col-lg-offset-2">
-            <form id="email-form" class="needs-validation">
-              <div class="form-group floating-label-form-group">
-                <label for="name">Name:</label>
-                <input type="name" class="form-control" id="name" placeholder="Name" name="name" required>          
-              </div>
-              <div class="form-group floating-label-form-group">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="Email" name="email" required>
-              </div>
-              <div class="form-group floating-label-form-group">
-                <label for="phone">Phone:</label>
-                <input type="phone" class="form-control" id="phone" placeholder="Phone" name="phone">
-              </div>
-              <div class="form-group floating-label-form-group">
-                <label for="textbox">Message:</label>
-                <textarea rows="3" type="textbox" class="form-control" id="message-text" placeholder="Message" name="message" required></textarea>
-              </div>              
-              <div class="col-lg-12 text-center">                    
-                <br/>
-                <button type="submit" class="btn btn-dark btn-xl" value="submit">Submit</button>                
-              </div>                  
-            </form>
-          </div>
-        </div>        
-      </div>
-    </section>
+    <${message} ...data></>
+    
     
     <div class="google-map" id="map" style="width:100%; height:auto;">
       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13319.703964920307!2d-84.1894976!3d33.4251738!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3db22615134730bf!2sLush+Nail+Bar!5e0!3m2!1sen!2s!4v1503924762019" width="100%" height="700" frameborder="0" style="border:0" allowfullscreen>
