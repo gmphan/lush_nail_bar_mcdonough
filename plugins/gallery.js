@@ -11,8 +11,8 @@ async function handleHomePage(req, reply){
     /**
      * if there are photos in upload folder then
      * go through and covert each photo into a thumbnail
-     * . The thumnails are moved to thumnails folder, and 
-     * the original photo are moved to thumbnail gallery folder
+     * . The thumnails are moved to public/assets/img/portfolio/thumnails folder, and 
+     * the original photo are moved to public/assets/img/gallery folder
      */
     if(uPhotos.length){        
         for(let photo of uPhotos){
@@ -41,6 +41,8 @@ async function handleHomePage(req, reply){
 
 async function mvPhotos(oldPath, newPath){
     console.log(newPath)
+
+    //this is rename but also move the file over
     fs.rename(oldPath, newPath, (err) => {
         if (err) throw err;
         console.log('Rename complete!');

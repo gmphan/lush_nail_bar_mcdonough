@@ -1,29 +1,52 @@
 <lasso-page package-path="./browser.json"/>
-import layout from "../layout/template/index.marko"
-<${layout} ...data>
-    <@title>Acrylic Nail</@title>
-    <@content>
-    <header class="masthead text-center text-white d-flex">
-      <div class="container my-auto">
-        <div class="row">
-          <div class="col-lg-10 mx-auto">
-            <h1 class="">
-              <strong>Guarantee you<br/> best services in town!</strong>
-            </h1>
-            <!-- <hr> -->
-            <hr class="light">
-          </div>
-          <div class="col-lg-8 mx-auto">
-            <!-- <p class="text-faded mb-5">Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p> -->
-            <!-- <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">More about us</a> -->
-            <a class="btn btn-light btn-xl js-scroll-trigger" href="#price-list">Price List</a>
-          </div>
+<section id="services">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">At Your Service</h2>
+        <br/><hr>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 text-center">
+        <div class="service-box mt-5 mx-auto">
+          <!-- <i class="fas fa-4x fa-gem text-primary mb-3 sr-icon-1"></i> -->
+          <img src="/public/assets/img/services/acrylicNail.jpg" alt="" height="118" width="250">
+          <h3 class="mb-3">Acrylic Nail</h3>
+          <a href="#price-list"><p class="text-muted mb-0">Read more...</p></a>
         </div>
       </div>
-    </header>
-    
-        
-        
-
-    </@content>
-</>
+      <div class="col-lg-3 col-md-6 text-center">
+        <div class="service-box mt-5 mx-auto">
+          <!-- <i class="fas fa-4x fa-paper-plane text-primary mb-3 sr-icon-2"></i> -->
+          <img src="/public/assets/img/services/pedicure.jpg" alt="" height="118" width="250">
+          <h3 class="mb-3">Spa Pedicure</h3>
+          <a href="#price-list"><p class="text-muted mb-0">Read more...</p></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 text-center">
+        <div class="service-box mt-5 mx-auto">
+          <!-- <i class="fas fa-4x fa-code text-primary mb-3 sr-icon-3"></i> -->
+          <img src="/public/assets/img/services/children.jpg" alt="" height="118" width="250">
+          <h3 class="mb-3">Children</h3>
+          <a href="#price-list"><p class="text-muted mb-0">Read more...</p></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 text-center">
+        <div class="service-box mt-5 mx-auto">
+          <!-- <i class="fas fa-4x fa-heart text-primary mb-3 sr-icon-4"></i> -->
+          <img src="/public/assets/img/services/waxing.jpg" alt="" height="118" width="250">
+          <h3 class="mb-3">Waxing</h3>
+          <a href="#price-list"><p class="text-muted mb-0">Read more...</p></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-12 text-center">
+        <!-- <p class="text-faded mb-5">Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p> -->
+        <br/><hr><br/>
+        <a class="btn btn-dark btn-xl js-scroll-trigger" href="#price-list">Price List</a>
+  </div>
+</section>
