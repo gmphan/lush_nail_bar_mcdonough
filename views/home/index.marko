@@ -4,6 +4,7 @@ import services from "../services/index.marko"
 import pricelist from "../price-list/index.marko"
 import photo from "../photo/index.marko"
 import message from "../message/index.marko"
+import contact from "../contact/index.marko"
 <${layout} ...data>
     <@title>Lush-Nail-Bar - McDonough</@title>
     <@content>
@@ -47,6 +48,8 @@ import message from "../message/index.marko"
     </section>
     
     <${services} ...data></>
+    <${contact} ...data></>
+    <${message} ...data></>
     <${pricelist} ...data></>
     <${photo} ...data></>
     
@@ -56,73 +59,8 @@ import message from "../message/index.marko"
         <a class="btn btn-light btn-xl sr-button" href="#">Photos</a>
       </div>
     </section> -->
-    <section class="bg-primary" id="contact">      
-      <div class="container text-white">
-        <div class="col-lg-8 mx-auto text-center">
-          <h2 class="section-heading">Contact Us</h2>
-          <hr class="light my-4">
-          <p class="mb-5"></p>
-        </div>
-        <div class="row">          
-          <!-- <div class="col-md-4"> -->
-          <div class="col-lg-4 ml-auto text-center"> 
-            <a class="js-scroll-trigger" href="#map">
-              <i class="fa fa-map-marker fa-3x mb-3"></i>
-              <p><font size="4">128 S Point Blvd
-              <br>McDonough, GA 30253</font></p>
-            </a>             
-          </div>
-          <div class="col-lg-4 mr-auto text-center"> 
-            <i class="fa fa-phone fa-3x mb-3"></i>
-            <p>
-            <font size="4"><a>(678) 782-3028</a></font>
-            </p>             
-          </div>                 
-          <div class="col-lg-4 mr-auto text-center">
-              <!-- <a href="mailto:Quanhi123456@yahoo.com">Email</a> -->
-              <a class="js-scroll-trigger" href="#message">              
-                <i class="fa fa-envelope fa-3x mb-3 sr-contact-2"></i>
-                <p><font size="4">Email</font></p>              
-              </a>            
-          </div>
-        </div>
-        <p class="mb-5"></p>
-        <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-6 border-white">
-            <div class="row">
-              <div class="col-md-12 text-center">
-                <p class="mb-4"></p>
-                <h2 class="section-heading">Service Hours</h2>
-                <hr class="light my-4">
-                <p class="mb-4"></p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12 text-center">
-                <!-- <div class="col-md-6"> -->
-                <table>
-                  <tr><td class="hour"><font size="5">Mon - Thu</font></td><td class="hour"><font size="5">10:00 am - 7:30 pm</font></td></tr>
-                  <tr><td class="hour"><font size="5">Fri - Sat</font></td><td class="hour"><font size="5">9:30 am - 7:30 pm</font></td></tr>
-                  <tr><td class="hour"><font size="5">Sun</font></td><td class="hour"><font size="5">12:00 pm - 6:00 pm</font></td></tr>
-                </table>
-                <p class="mb-5"></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3"></div>
-          <p class="mb-5"></p>
-          </div>
-          <p class="mb-5"></p>
-                
-        </div>
-      <hr class="light my-4">  
-      <p class="mb-5"></p>
-      <div id="message-btn" class="col-lg-8 mx-auto text-center">          
-            <a class="btn btn-light btn-xl js-scroll-trigger" href="#message">Message Us!</a>            
-      </div>           
-    </section>
-    <${message} ...data></>
+    
+    
     
     
     <div class="google-map" id="map" style="width:100%; height:auto;">
