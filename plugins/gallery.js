@@ -16,20 +16,23 @@ async function handleHomePage(req, reply){
      */
     if(uPhotos.length){        
         for(let photo of uPhotos){
-            // console.log(photo)
-            let photoPath = path.join(__dirname, '../public/assets/img', 'upload', photo) 
-            const gPath = path.join(__dirname, '../public/assets/img', 'gallery', photo) 
-            let photoName = path.parse(photoPath).name             
-            await thumb({
-                suffix: '',
-                width: '200',
-                overwrite: true,
-                source: photoPath,
-                destination: path.join(__dirname, '../public/assets/img/portfolio', 'thumbnails')
-            })
-            .then(async function(){
-                await mvPhotos(photoPath, gPath)
-            })            
+            if(photo !== '.gitkeep'){
+                // console.log(photo)
+                let photoPath = path.join(__dirname, '../public/assets/img', 'upload', photo) 
+                const gPath = path.join(__dirname, '../public/assets/img', 'gallery', photo) 
+                let photoName = path.parse(photoPath).name             
+                await thumb({
+                    suffix: '',
+                    width: '200',
+                    overwrite: true,
+                    source: photoPath,
+                    destination: path.join(__dirname, '../public/assets/img/portfolio', 'thumbnails')
+                })
+                .then(async function(){
+                    await mvPhotos(photoPath, gPath)
+                })            
+            }
+            
         }
     }
     const galleryPath = path.join(__dirname, '../public/assets/img/', 'gallery')
