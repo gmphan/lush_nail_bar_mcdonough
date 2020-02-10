@@ -1,7 +1,7 @@
 config.js
 node_modules
 public/static
-public/assets/img/gallery/*
-public/assets/img/upload/*
-public/assets/img/portfolio/thumbnails/*
+public/assets/img/gallery/
+public/assets/img/upload/
+public/assets/img/portfolio/thumbnails/
 .cache
