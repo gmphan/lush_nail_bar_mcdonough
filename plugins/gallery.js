@@ -37,6 +37,14 @@ async function handleHomePage(req, reply){
     }
     const galleryPath = path.join(__dirname, '../public/assets/img/', 'gallery')
     const photoNames = fs.readdirSync(galleryPath) 
+    console.log(photoNames)
+
+    //do the below to remove .gitkeep before sending out to the view
+    const index = photoNames.indexOf('.gitkeep')
+    if(index > -1){
+        photoNames.splice(index, 1)
+    }
+
     // render gallery page and send all photo names from gallery to it
     reply.view('/views/gallery/index', {photoNam:photoNames})
 }
