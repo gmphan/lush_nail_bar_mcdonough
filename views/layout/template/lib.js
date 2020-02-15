@@ -1,6 +1,8 @@
 
-$(document).ready(async function(){'use strict';
-         
+'use strict';
+
+$(document).ready(async function(){  
+    
 });
 
 
