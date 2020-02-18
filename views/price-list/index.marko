@@ -44,49 +44,43 @@
                     </ul>
                 </div>
                 <div id="price-detail" class="col-lg-8 mx-auto" style="background-color:white; padding:1em 2em 1em 5em;">  
-                    $ const fstLvlPriceObjArr = Object.keys(data)
+                    $ const priceListObj = data.priceList
+                    $ const fstLvlPriceObjArr = Object.keys(priceListObj)
                     <!-- ${fstLvlPriceObjArr} -->
-                    <for|item, index, array| of=fstLvlPriceObjArr>
-                        $ const id = '#'+item
-                        <if(index === 0)>                                                          
+                     <for|item, index, array| of=fstLvlPriceObjArr>
+                        $ const id = '#'+item  
+                       <if(index === 0)>                                                          
                             <div class="row" id=id>                                
-                                $ const sndObj = data[item]
+                                $ const sndObj = priceListObj[item]
                                 $ const sndLvlPriceObjArr = Object.keys(sndObj)
-                                <table>
-                                <!-- <ul class="list-unstyled border-line">                                 -->
-                                    <for|item2, index2, array2| of=sndLvlPriceObjArr>
-                                        <!-- <li style="margin:0 0 2em 0">${item2} <span class="pull-right">${sndObj[item2]}</span></li> -->
-                                        <!-- <li class="list-bottom-line">${item2} <span>${sndObj[item2]}</span></li> -->
+                                <table>                    
+                                    <for|item2, index2, array2| of=sndLvlPriceObjArr>                                        
                                         <tr>
                                             <td style="width:90%">${item2}</td>
                                             <td>${sndObj[item2]}</td>                                            
                                         </tr>                      
-                                    </for>                               
-                                <!-- </ul>                                    -->
+                                    </for>          
                                 </table>
                             </div>
                         </if>
                         <if(index !== 0)>                                                                                  
                             <div class="row hidden" id=id>     
-                                $ const sndObj = data[item]
+                                $ const sndObj = priceListObj[item]
                                 $ const sndLvlPriceObjArr = Object.keys(sndObj)
                                 <table>
-                                <!-- <ul class="list-unstyled"> -->
+                                
                                     <for|item2, index2, array2| of=sndLvlPriceObjArr>
-                                        <!-- <li class="list-bottom-line">${item2} <span class="pull-right">${sndObj[item2]}</span></li> -->
+                                
                                         <tr>
                                             <td style="width:90%">${item2}</td>
                                             <td>${sndObj[item2]}</td>                                            
                                         </tr>   
                                     </for> 
-                                <!-- </ul>                                    -->
+                                
                                 </table>
                             </div>
                         </if>
-                        
-                        <div>
-                        </div>
-                    </for>
+                    </for> 
 
 
                     

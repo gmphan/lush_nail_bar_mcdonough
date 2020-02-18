@@ -1,10 +1,6 @@
 
 'use strict';
 
-$(document).ready(async function(){  
-    
-});
-
 
 async function ajaxFunc(typeP, urlP, dataP){
     console.log(typeP, urlP, dataP)

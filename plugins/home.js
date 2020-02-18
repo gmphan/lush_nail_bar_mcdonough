@@ -1,11 +1,11 @@
 'use strict'
 
 const log = require('../lib/logger')
-const priceList = require('../public/assets/price-list')
+const homeObj = require('../public/assets/home-obj')
 
 async function handleHomePage(req, reply){
     
-    reply.view('/views/home/index', priceList)//{text:'text'})
+    reply.view('/views/home/index', homeObj)//{text:'text'})
     // reply.send('home page')
 }
 
