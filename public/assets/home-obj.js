@@ -40,21 +40,6 @@ const homeObj = {
             'Manicure'                      : '$15',
             'Pedicure & Manicure'           : '$35'
         },
-        additional:{
-            'Polish Change Hand Color'                  : '$8',
-            'Polish Change Hand French of American'     : '$12',
-            'Polish Change Toes Color'                  : '$10',
-            'Polish Change Toes French American'        : '$15',
-            'Nail Repair'                               : '$5+',
-            'Nails Cut Down Acrylic'                    : '$3+',
-            'Nails Soak Off Acrylic'                    : '$10',
-            'Nail Art Design'                           : '$5+',
-            'Paraffin Wax Hand'                         : '$8',
-            'Paraffin Wax Leg'                          : '$10',
-            'Take Off Gel Polish or SNS'                : '$10',
-            '2 Acrylic on Toes'                         : '$12',
-            'Chrome Additional'                         : '$25'
-        },
         spa_pedi:{
             '1. Regular Pedicure: Pepper mint soak in, nail shapping, cuticle care + callus removal, finish with soothing and massage noisturizing lotion, and polish.' : '$23',
     
@@ -103,6 +88,21 @@ const homeObj = {
             'Eyelashes Whole Strip':'$16',
             'Eyelash Extensions':'$120+',
             'Eyelashes Fill':'$50+',
+        },
+        additional:{
+            'Polish Change Hand Color'                  : '$8',
+            'Polish Change Hand French of American'     : '$12',
+            'Polish Change Toes Color'                  : '$10',
+            'Polish Change Toes French American'        : '$15',
+            'Nail Repair'                               : '$5+',
+            'Nails Cut Down Acrylic'                    : '$3+',
+            'Nails Soak Off Acrylic'                    : '$10',
+            'Nail Art Design'                           : '$5+',
+            'Paraffin Wax Hand'                         : '$8',
+            'Paraffin Wax Leg'                          : '$10',
+            'Take Off Gel Polish or SNS'                : '$10',
+            '2 Acrylic on Toes'                         : '$12',
+            'Chrome Additional'                         : '$25'
         }
     }
     
