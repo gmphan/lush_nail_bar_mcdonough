@@ -1,4 +1,8 @@
 {"dependencies":[
     "lib.js",
-    "style.css"
+    "style.css",
+    {
+        "type":"css",
+        "url":"//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    }
 ]}
