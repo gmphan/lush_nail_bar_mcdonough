@@ -32,23 +32,23 @@ $('.price-link').on("click", function(){
     /** end show and hide the menu */ 
 })
 
-function getChildNodeIndex(parentId, href){
+// function getChildNodeIndex(parentId, href){
      
-    var parentElementChildNodes = document.getElementById(parentId).childNodes
+//     var parentElementChildNodes = document.getElementById(parentId).childNodes
     
 
-    for(let i=0; i<parentElementChildNodes.length; i++){
-        var aTag = parentElementChildNodes[i].childNodes[0]
-        var fullHref = aTag.href 
-        var numSymbolPos = fullHref.search("#")
-        var queryString = fullHref.substring(numSymbolPos, fullHref.length)
-        if(queryString === href){
-            console.log(href)
-            return i
-        }
-    }
+//     for(let i=0; i<parentElementChildNodes.length; i++){
+//         var aTag = parentElementChildNodes[i].childNodes[0]
+//         var fullHref = aTag.href 
+//         var numSymbolPos = fullHref.search("#")
+//         var queryString = fullHref.substring(numSymbolPos, fullHref.length)
+//         if(queryString === href){
+//             console.log(href)
+//             return i
+//         }
+//     }
 
-}
+// }
 
 
 
