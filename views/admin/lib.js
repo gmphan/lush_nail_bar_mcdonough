@@ -1,3 +1,28 @@
+'use strict'
+
+$(document).ready(function(){
+  $('#photo-upload-form').submit(function(e){
+    e.preventDefault();
+    console.log('testing')
+    // $.ajax({
+    //   type:'POST',
+    //   url:'/update/post',
+    //   data:{
+    //     postId:url.substr(url.lastIndexOf('/')+1),
+    //     postName:$("input[name='post_name']").val(),
+    //     postContent:$("textarea[name='postContent']").val()        
+    //   },
+    //   success:function(){
+    //     window.location.href='/post/'+url.substr(url.lastIndexOf('/')+1);
+    //     //console.log('Successfully');
+    //   },
+    //   error:function(){
+    //     alert('Error updating the post');
+    //   }
+    // });
+  });
+})
+
 
 function myFunction(){
     var x = document.getElementById("myFile");
@@ -27,4 +52,32 @@ function myFunction(){
       }
     }
     document.getElementById("demo").innerHTML = txt;
+  }
+
+  //remember to create everything modularity
+  //create an submitPhoto 
+  //submitPhoto will upload the photos to the upload folder
+  function uploadPhotos(photoJson){
+    //take the json ajax an endpoint
+    $.ajax({
+      type:'POST',
+      url:'/receivePhotos',
+      data:{
+        usrname:$('#usrname').val(),
+        psw:$('#psw').val()
+      },
+      success:function(returnData){
+        if(returnData==='badUsername'){
+          alert('Wrong Username');
+        }else if(returnData==='badPassword'){
+          alert('Wrong Password');
+        }else if(returnData==='matched'){
+          href:window.location.href='/';
+        }
+      },
+      error:function(){
+        alert('Error ajax /validate/login');
+      }
+    })
+    
   }

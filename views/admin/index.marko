@@ -3,12 +3,14 @@
 <!DOCTYPE html>
 <html>
     <body onload="myFunction()">
+        <form id="photo-upload-form">
+            <input type="file" id="myFile" multiple size="50" onchange="myFunction()">
 
-        <input type="file" id="myFile" multiple size="50" onchange="myFunction()">
+            <p id="demo"></p>
 
-        <p id="demo"></p>
-
-        <p><strong>Tip:</strong> Use the Control or the Shift key to select multiple files.</p>
-
+            <p><strong>Tip:</strong> Use the Control or the Shift key to select multiple files.</p>
+            <input type="submit" value="Submit" class="button">
+        
+        </form>
     </body>
 </html>

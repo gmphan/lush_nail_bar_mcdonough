@@ -19,8 +19,12 @@
 async function handleAdminPage(req, reply){
     reply.view('/views/admin/index', {text:'text'})
 }
+async function handleReceivePhotos(req, reply){
+    return('test')
+}
 
 module.exports = async function(fastify, opts, next){
     fastify.get('/admin', handleAdminPage)
+    fastify.post('/receivePhotos', handleReceivePhotos)
 }
   
