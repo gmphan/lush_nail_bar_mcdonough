@@ -14,7 +14,7 @@ async function mailHandler(req, reply){
     // send mail with defined transport object
     let info = await transporter.sendMail({
         from: ``+reqData.name+` , <`+reqData.email+`>`, //not really matter 
-        to: 'lushnailbarmcdonoughga@gmail.com',//, baz@example.com', // list of receivers
+        to: 'gmphan7@gmail.com',//'lushnailbarmcdonoughga@gmail.com',//, baz@example.com', // list of receivers
         subject:'Message from: '+ reqData.email, // Subject line
         // text: reqData.message // plain text body
         html: `<b>Customer name: `+reqData.name+`</b><br/><p>`+reqData.message+`</p>` // html body
