@@ -11,9 +11,12 @@ $('#email-form').submit(async function(e){
     
     let ajaxRes = await ajaxFunc('POST', '/mailer', data)
     console.log(ajaxRes)
-    if(ajaxRes === 1){
+    if(ajaxRes === true){
         alert('We have recieved your message. Thank you '+data.name+'!')
         document.getElementById('email-form').reset();
+    }
+    else if(ajaxRes === false){
+        alert('Sorry '+data.name+' your email was failed to delivery. Please try again later.')
     }
 });    
     // });
