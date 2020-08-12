@@ -2,7 +2,7 @@
 
 const logger = require('../lib/logger')
 const nodemailer = require('nodemailer')
-const config = require('../config')
+const configF = require('../config')
 const aws = require('aws-sdk')
 
 async function mailHandler(req, reply){
@@ -63,5 +63,6 @@ function sendRawEmail(ses, params){
 
 
 module.exports = async(fastify, opts, next)=>{
+    let config = await configF()
     fastify.post('/mailer', mailHandler)
 }
