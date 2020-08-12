@@ -9,3 +9,4 @@ public/assets/img/upload/*
 public/assets/img/portfolio/thumbnails/*
 !public/assets/img/portfolio/thumbnails/.gitkeep
 .cache
+package-lock.json
