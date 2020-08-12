@@ -1,8 +1,8 @@
 'use strict'
-const configF = require('../../config')
-let config
+//const configF = require('../../config')
+//let config
 const homeObj = {
-    homeUrl: {}, 
+    //homeUrl: {}, 
     priceList:{
         acrylic:{
             'Acrylic Full Set'              : '$25+',
@@ -108,8 +108,9 @@ const homeObj = {
     
 }
 
-module.exports = async function(){
-    config = await configF()
-    homeObj.homeUrl = config.homeUrl
-    return homeObj
-}
+// module.exports = async function(){
+//     config = await configF()
+//     homeObj.homeUrl = config.homeUrl
+//     return homeObj
+// }
+module.exports= homeObj
