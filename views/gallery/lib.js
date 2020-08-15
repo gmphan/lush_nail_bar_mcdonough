@@ -1,22 +1,28 @@
-
-//get homeUrl from the session which capture from home/lib.js
-var homeUrl = sessionStorage.homeUrl
-$(".nav-link").on("click", function redirectPage(){
-    //figure out if it is still in the home page then do nothing      
-    if(window.location.href !== homeUrl){
-        const hrefValue = $(this).attr("href")
-        sessionStorage.setItem('hrefHolder', hrefValue)
-        window.location.href = homeUrl //+hrefValue 
-    }        
-})   
-
-/**
- * The reason to have URL capture in sessionStorage because of a few things:
- * 1. The original home page was a free one page web from bootrap, and it use #menu in
- * its navigation, so the page can go back and forth with the browser.
- * 2. Gallery page is an another view and completely separate from the main page, and 
- * to use the same navigation, I have to use the code block above to hit the server again
- * to go back to the homepage 
- */
-
-
+async function getPhotos(){
+    let alreadyLoad 
+    if(alreadyLoad === 'yes'){
+        return true
+    }
+    alreadyLoad = 'yes'
+    document.getElementById("click1").innerHTML = `<button hidden id="click1" onclick="getPhotos()">Click here to view Photos</button>`
+    let ajaxRes = await ajaxFunc('GET', '/gallery', true)
+    let photoNameArr = ajaxRes.photoNam
+    // photoNameArr = photoNameArr.slice(0,5) //for testing purpose
+    let htmlStr = `<div class="row no-gutters popup-gallery">`
+    for(let name of photoNameArr){
+        console.log(name)
+        if(name === '.DS_Store'){
+            continue
+        }
+        htmlStr+=`
+            <div class="col">                        
+                <a class="" href="/public/assets/img/gallery/${name}">                                                      
+                    <img class="img-size" src="/public/assets/img/portfolio/thumbnails/${name}" alt=""> 
+                </a>                        
+            </div>
+        `
+    }
+    // console.log(htmlStr)
+    document.getElementById("photo1").innerHTML = htmlStr
+    return true
+}

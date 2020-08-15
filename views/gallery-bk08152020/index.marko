@@ -1,0 +1,28 @@
+<lasso-page package-path="./browser.json"/>
+import layout from "../layout/template/index.marko"
+<${layout} ...data>
+<@title>Gallery</@title>
+<@content>
+    <section class="bg-primary bodi-content" id="gallery" > 
+    <!-- ${data.photoNam}  
+        go through every names in gallery folder and
+        render thumbnails to the screen. 
+    -->
+        <div class="container-fluid p-0 text-center">
+            <h2 class="section-heading text-white">Gallery</h2>
+             <hr class="light my-5">
+            <div class="row no-gutters popup-gallery">
+                <for|name, index| of=data.photoNam>
+                    <div class="col">                        
+                        <a class="" href="/public/assets/img/gallery/${name}">                                                      
+                            <img class="img-size" src="/public/assets/img/portfolio/thumbnails/${name}" alt=""> 
+                        </a>                        
+                    </div>
+                </for>
+            </div>
+        </div>
+    </section>
+</@content>
+</>
+
+
