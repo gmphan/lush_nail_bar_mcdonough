@@ -1,5 +1,13 @@
-<form>
-  <label for="name">I,</label>
-  <input type="text" id="fname" name="fname">
-  <textarea rows="4" cols="50" name="comment"></textarea>
-</form>
+<lasso-page package-path="./browser.json"/>
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>COVID-19 consent</title>
+</head>  
+<body>  
+  <div id="covid19form" class="container" style="padding-top:50px">
+    $!{data.html}
+  </div>
+</body>
+</html>

@@ -12,13 +12,24 @@
  */
 
 const {Sequelize, DataTypes, Model} = require('sequelize')
-const configF = require('../config')
-const logger = require('../lib/logger')
+const configF                       = require('../config')
+const logger                        = require('../lib/logger')
+const path                          = require('path')
+const fs                            = require('fs')
+const { stdout } = require('process')
+const { Stream } = require('stream')
+const covid19consentF                     = require('../public/assets/covid19consent')
 
-let sequelize, config, log
+let sequelize, config, log, htmlObj
 
 async function handleCovidForm(req, reply){
+
+    //get html
+    htmlObj = await covid19consentF()
+    // console.log(htmlObj)
+
     
+    //inserting new records
     sequelize = new Sequelize(config.db.database, config.db.user, config.db.password, {
         host:config.db.host,
         dialect:'postgres',
@@ -36,11 +47,30 @@ async function handleCovidForm(req, reply){
         consent_form:''
     }
 
-    await createNewRecord(consentAbstraction, consentObj)
+    // await createNewRecord(consentAbstraction, consentObj)
 
 
-    reply.view('/views/covid-form/index', {})
+    return reply.view('/views/covid-form/index', htmlObj)
 }
+
+async function handleCovidFormPost(req, reply){
+    console.log(req.body.dataK)
+    
+    return 0
+}
+
+// function getHtml(){
+//     return new Promise((resolve, reject)=>{
+//         let path2html = path.join(__dirname, '../public/assets/', 'covid19consent.html')
+//         let html = fs.readFileSync(path2html, {encoding:'utf8', flag:'r'})
+//         console.log(html)
+//         //htmlStream.pipe(process.stdout)
+//         // stream.pipeline(htmlBuffer)
+//         return resolve(html)
+//     }).catch(err=>{
+//         throw err
+//     })
+// }
 
 //create new record
 async function createNewRecord(table, obj){
@@ -92,4 +122,6 @@ module.exports = async(fastify, opts, next)=>{
     config = await configF()
     log = await logger()
     fastify.get('/covid-form', handleCovidForm)
+    fastify.post('/covid-form', handleCovidFormPost)
+    
 }
