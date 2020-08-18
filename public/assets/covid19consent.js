@@ -8,10 +8,39 @@
 // })()
 
 
-async function createHtml(inputObjP){
-    let inputObj = inputObjP     
-    console.log(inputObj)
-    let htmlObj = {html:`                  
+async function createHtml(newInputObj){
+    let inputObj, button
+    if(newInputObj === 'NA'){
+        inputObj = {
+            input1:'<input id="covid1" type="text" name="wholename1" required>',
+            input2:'<input id="covid2" type="text" name="initial1" required>',
+            input3:'<input id="covid3" type="text" name="initial2" required>',
+            input4:'<input id="covid4" type="text" name="initial3" required>',
+            input5:'<input id="covid5" type="text" name="temp" required>',
+            
+            input6:'<input id="covid6" type="text" name="initial4" required>',
+            input7:'<input id="covid7" type="text" name="initial5" required>',
+            input8:'<input id="covid8" type="text" name="initial6" required>',
+            
+            input9:'<input id="covid9" type="text" name="initial7" required>',
+            input10:'<input id="covid10" type="text" name="wholename2" required>',
+            input11:'<input id="covid11" type="text" name="date" required>'
+        }
+        button ={theButton: `
+            <div id="sbmtC19btn" style="text-align:center; padding-bottom:50px">
+                <button type="submit" class="btn btn-dark btn-xl" value="submit">Submit</button>        
+            </div>
+        `}
+    }else{
+        inputObj = newInputObj     
+        button = {theButton:`<div hidden></div>`}
+    }
+    
+    
+
+    // console.log(inputObj)
+    let htmlObj = {
+        html:`                  
             <h3 style="text-align:center"><u>COVID-19 Pandemic Nail Treatment Consent Form</u></h3><br><br>
             <form id="covid19consent" class="needs-validation" >
             <p>
@@ -53,12 +82,10 @@ async function createHtml(inputObjP){
                 ${inputObj.input11}
             </p>
             <br/>
-            <div id="sbmtC19btn" style="text-align:center; padding-bottom:50px">
-                <button type="submit" class="btn btn-dark btn-xl" value="submit">Submit</button>        
-            </div>            
+            ${button.theButton}          
             </form> 
             `,
-            htmlInput:inputObj
+        htmlInput:inputObj
     }
     return htmlObj
 }
