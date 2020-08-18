@@ -62,9 +62,8 @@ async function handleCovidFormPost(req, reply){
     }
 
     await createNewRecord(consentAbstraction, consentObj)
-
-
-    return 0
+    
+    return true
 }
 
 //create new record

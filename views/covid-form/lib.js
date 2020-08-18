@@ -8,20 +8,28 @@ $(function(){
     $('#covid19consent').submit(async function(e){
         e.preventDefault();      
         let data = {}
+        
         for(let id of idArr){
             data[id]=$(`#${id}`).val()
-        }       
-        console.log(data)
-        document.getElementById('covid19consent').reset();
+        }      
+        let customerName = data[idArr[0]]
+        // console.log(data)
+        // document.getElementById('covid19consent').reset();
         
         let ajaxRes = await ajaxFunc('POST', '/covid-form', data)
         // console.log(ajaxRes)
-        // if(ajaxRes === true){
-        //     alert('We have recieved your message. Thank you '+data.name+'!')
-        //     document.getElementById('email-form').reset();
-        // }
-        // else if(ajaxRes === false){
-        //     alert('Sorry '+data.name+' your email was failed to delivery. Please try again later.')
-        // }
+        if(ajaxRes === true){
+            alert('Your form was submitted successfully. Thank you '+customerName+'!') 
+            window.location.href = "http://lushnailbar-mcdonough.com/"          
+            // document.getElementById('covid19consent').reset();            
+            // document.getElementById('covid19consent').innerHTML = `
+            //     <div style="text-align:center; padding-top:20px">
+            //         <button type="button" class="btn btn-secondary"><a href="http://lushnailbar-mcdonough.com/">Click for Homepage</a></button>       
+            //     </div>  
+            // `;            
+        }
+        else {
+            alert('Sorry '+customerName+', your form was failed to submit. Please try again later.')
+        }
     });    
 })
