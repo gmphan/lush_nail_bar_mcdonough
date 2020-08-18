@@ -1,7 +1,20 @@
 'use strict'
 
-const config = {
-    serverPort: 
+let config = {
+    serverPort:{},
+    homeUrl:{},
+    db:{
+        database:'',
+        user:'',
+        password:'',
+        host:'lushnailbar-mcdonough.com'
+    }
 }
 
-module.exports = config
+module.exports = async function(){
+    let port = 
+    let url = ':'
+    config.serverPort = port
+    config.homeUrl = url+port+'/'
+    return config
+}
