@@ -20,12 +20,28 @@ const { stdout } = require('process')
 const { Stream } = require('stream')
 const covid19consentF                     = require('../public/assets/covid19consent')
 
-let sequelize, config, log, htmlObj
+let sequelize, config, log, htmlObj, inputObj
 
 async function handleCovidForm(req, reply){
 
     //get html
-    htmlObj = await covid19consentF()
+    let initInputObj = {
+        input1:'<input id="covid1" type="text" name="wholename1" required>',
+        input2:'<input id="covid2" type="text" name="initial1" required>',
+        input3:'<input id="covid3" type="text" name="initial2" required>',
+        input4:'<input id="covid4" type="text" name="initial3" required>',
+        input5:'<input id="covid5" type="text" name="temp" required>',
+        
+        input6:'<input id="covid6" type="text" name="initial4" required>',
+        input7:'<input id="covid7" type="text" name="initial5" required>',
+        input8:'<input id="covid8" type="text" name="initial6" required>',
+        
+        input9:'<input id="covid9" type="text" name="initial7" required>',
+        input10:'<input id="covid10" type="text" name="wholename2" required>',
+        input11:'<input id="covid11" type="text" name="date" required>'
+    }
+    htmlObj = await covid19consentF(initInputObj)
+    
     // console.log(htmlObj)
 
     
@@ -54,8 +70,26 @@ async function handleCovidForm(req, reply){
 }
 
 async function handleCovidFormPost(req, reply){
+
+    //post obj
     console.log(req.body.dataK)
+    let postObj = req.body.dataK
+    let postObjKeys = Object.keys(postObj)
+    console.log(postObjKeys)
+
+    //get inputObj from covid19consent.js
+    let consentHtmlObj = await covid19consentF()    
+    inputObj = consentHtmlObj.htmlInput
+    let consentHtmlObjKeys = Object.keys(inputObj)
     
+    //make new consent obj to get new html file
+    let newInputObj = {}
+    for(let index in postObjKeys){
+        newInputObj[consentHtmlObjKeys[index]] = postObj[postObjKeys[index]]    
+    }
+    console.log(newInputObj)
+    let newHtmlObjRes = await covid19consentF(newInputObj)
+    // console.log(newHtmlObjRes.html)
     return 0
 }
 

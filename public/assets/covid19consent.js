@@ -8,20 +8,9 @@
 // })()
 
 
-async function createHtml(){
-    let inputObj = {
-        input1:'<input id="wholename1" type="text" name="wholename1" required>',
-        input2:'<input id="initial1" type="text" name="initial1" required>',
-        input3:'<input id="initial2" type="text" name="initial2" required>',
-        input4:'<input id="initial3" type="text" name="initial3" required>',
-        input5:'<input id="temp" type="text" name="temp" required>',
-        input6:'<input id="initial4" type="text" name="initial4" required>',
-        input7:'<input id="initial6" type="text" name="initial6" required>',
-        input8:'<input id="initial7" type="text" name="initial7" required>',
-        input9:'<input id="wholename2" type="text" name="wholename2" required>',
-        input10:'<input id="date" type="text" name="date" required>'
-    }
-    
+async function createHtml(inputObjP){
+    let inputObj = inputObjP     
+    console.log(inputObj)
     let htmlObj = {html:`                  
             <h3 style="text-align:center"><u>COVID-19 Pandemic Nail Treatment Consent Form</u></h3><br><br>
             <form id="covid19consent" class="needs-validation" >
@@ -50,17 +39,18 @@ async function createHtml(){
                 To prevent the spread of contangious of the viruses and to help protect each other, I understand that I will have to follow the salon's strict guidelines.
                 ${inputObj.input6}
                 (Initial)<br><br>
-                I understand that air travel significantly increases my risk of contracting and transmitting the COVID-19 virus, and I understand that the CDC, OSHA and Georgia Board of Cosmetology and Barbers recommend social distancing of at least six feet.<input type="text" id="initial5" name="initial5" required>(Initial)<br><br>
+                I understand that air travel significantly increases my risk of contracting and transmitting the COVID-19 virus, and I understand that the CDC, OSHA and Georgia Board of Cosmetology and Barbers recommend social distancing of at least six feet.
+                ${inputObj.input7}(Initial)<br><br>
                 <ul>
                 <li>I verify that I have not traveled outside the United States in the past 14 days to countries that have been affected by COVID-19.
-                    ${inputObj.input7}(Initial)<br><br></li>
-                <li>I verify that I have not domestically within the United States by commercial airlines, buses, or trains within the past 14 days. 
                     ${inputObj.input8}(Initial)<br><br></li>
+                <li>I verify that I have not domestically within the United States by commercial airlines, buses, or trains within the past 14 days. 
+                    ${inputObj.input9}(Initial)<br><br></li>
                 </ul>
                 <label for="name">Name:</label>
-                ${inputObj.input9}<br><br>
+                ${inputObj.input10}<br><br>
                 <label for="date">Date:</label>
-                ${inputObj.input10}
+                ${inputObj.input11}
             </p>
             <br/>
             <div id="sbmtC19btn" style="text-align:center; padding-bottom:50px">
