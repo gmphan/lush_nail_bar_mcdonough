@@ -1,4 +1,5 @@
 $(function(){
+    $( "#covid11" ).datepicker();
     let inputElements = document.getElementsByTagName('input')
     let idArr = []
     for(let i=0; i<inputElements.length; i++){
