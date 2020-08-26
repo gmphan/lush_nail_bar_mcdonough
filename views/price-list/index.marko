@@ -10,8 +10,6 @@
                 </div>
             </div>
             <div id="pl-body" class="row">
-                
-
                 <div class="col-lg-4 text-center" style="padding:0em 0 0em 0">
                     <ul id="ul-priceList" class="list-unstyled components">
                         <li class='active'>
@@ -47,7 +45,7 @@
                     $ const priceListObj = data.priceList
                     $ const fstLvlPriceObjArr = Object.keys(priceListObj)
                     <!-- ${fstLvlPriceObjArr} -->
-                     <for|item, index, array| of=fstLvlPriceObjArr>
+                    <for|item, index, array| of=fstLvlPriceObjArr>
                         $ const id = '#'+item  
                        <if(index === 0)>                                                          
                             <div class="row" id=id>                                
@@ -63,7 +61,7 @@
                                 </table>
                             </div>
                         </if>
-                        <if(index !== 0)>                                                                                  
+                       <if(index !== 0)>                                                                                  
                             <div class="row hidden" id=id>     
                                 $ const sndObj = priceListObj[item]
                                 $ const sndLvlPriceObjArr = Object.keys(sndObj)
@@ -80,11 +78,7 @@
                                 </table>
                             </div>
                         </if>
-                    </for> 
-
-
-                    
-                                 
+                    </for>                                  
                 </div>                            
             </div>  
             <div class="text-center">   
