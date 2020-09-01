@@ -18,7 +18,7 @@ async function pricelistv2handler(){
 
     try{
         await db.init()
-        let test = await db.getModel()
+        let test = await db.getModel('covid_19_consent')
         let res = await test.findAll()
         console.log(res)
     }catch(error){
