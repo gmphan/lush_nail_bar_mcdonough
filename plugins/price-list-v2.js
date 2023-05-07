@@ -2,30 +2,22 @@
 const db = require('../lib/db')
 
 async function pricelistv2handler(){
-    
-    /**
-     * query the price and put them in an object then return the object to the ajax call 
-     */
-    //connect to the db 
-    // try{
-    //     let sequelize = await db.init() //
-    //     sequelize.authenticate()
-    //     console.log('connected')
-    // }catch(error){
-    //     console.log('Unable to connecto the db:', error)
-    // }
-    // sequelize.close()
-
+    let test
     try{
-        await db.init()
-        let test = await db.getModel('covid_19_consent')
-        let res = await test.findAll()
-        console.log(res)
+        const covid19consentModel = db.sequelize.models.covid_19_consents
+        test = await covid19consentModel.findAll({
+            where:{
+                id:1
+            }
+        })
+        
+        // let res = await test.sequelize.models.covid_19_consents 
+        // console.log(test)
     }catch(error){
         console.log(error)
     }
 
-    return 0
+    return test
 }
 
 
