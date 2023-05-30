@@ -44,29 +44,6 @@ const homeObj = {
             '* Gel polish with pedicure extra' : '$15',
             '* Shape and Long nails will be extra' : '$10+'
         },
-        spa_pedi:{
-            '1. Regular Pedicure: Pepper mint soak in, nail shapping, cuticle care + callus removal, finish with soothing and massage noisturizing lotion, and polish.' : '$23',
-    
-            'Combo Classic' : '$36',
-            '2. Classic Deluxe Pedicure: Pepper mint soak in, nail shapping, cuticle care + callus removal, exfoliate with softening lemon sugar scrub, hot towel. Finish with moisturizing with lotion massage and polish.': '$28',
-            
-            'Combo Deluxe': '$45',
-            '3. Classic Deluxe Plus Pedicure: Pepper mint soak in, nail shapping, cuticle care + callus removal, exfoliate with softening lemon sugar scrub + Foot Mask, hot towel. Finish with moisturizing with lotion massage and polish.': '$32',
-            
-            'Combo Deluxe Plus' : '$52',
-            '4. Deluxe OPI Pedicure: Pepper mint soak in, nail shapping, cuticle care + callus removal, exfoliate with softening OPI sugar scrub + Foot mask, hot towel. Finish with moisturizing with OPI lotion massage and polish.': '$34',
-            
-            'Combo Duluxe OPI': '$58',
-            '5. Deluxe OPI Pedicure w/Paraffin: Pepper mint soak in, nail shapping, cuticle care + callus removal, exfoliate with softening OPI sugar scrub + Foot mask + Paraffin wax, hot towel. Finish with moisturizing with OPI lotion massage and polish.': '$40',
-            
-            'Combo Deluxe OPI W/Paraffin Wax': '$65',
-            '6. Luxury OPI Pedicure: Pepper mint soak in, nail shapping, cuticle care + callus removal, exfoliate with softening OPI sugar scrub + Foot Mask + Paraffin wax, hot towel, hot stone massage to releaseiles and muscle and massage OPI lotion and polish.': '$50',
-            
-            'Combo Luxury OPI':'$75',
-            '7. Lush Nail Special Nature: Sea salt soak, mud masque, massage cream, sugar scrub, hot towel': '$40+',
-            
-            '8. VIP Luxury Nature: Sea salt soak, sugar scrub, hot towel, masque massage cream, paraffin wax, hot stone, massage.': '$50+'
-        },
         kid_menu:{
             'Kid Manicure': '$15+',
             'Kid Pedicure (under 4 ft.)': '$22+',
